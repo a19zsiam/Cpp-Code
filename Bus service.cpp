@@ -24,13 +24,13 @@ int main(){
 int choice, a1,b1,where;
 BusService c1;
 do{
-cout<<"This bus will go Jattrabari from Diyabari"<<endl;
+cout<<"\n\n\nThis bus will go Jattrabari from Diyabari"<<endl;
 cout<<"1.Get in the bus"<<endl;
 cout<<"2.Amount of passenger."<<endl;
 cout<<"3.Total income of Bus."<<endl;
 cout<<"4.Exit."<<endl;
 cout<<"Enter your choice."<<endl;;
-
+cin>>choice;
 switch(choice){
 case 1:
 cout<<"Where you want to go?"<<endl;
@@ -53,8 +53,8 @@ a1=10;
 else if(where==5)
 a1=60;
 else{
-cout<<"Invalid code"<<endl;
-exit(0);
+cout<<"Invalid destination"<<endl;
+continue;
 }
 cout<<"Now enter the amount of passenger."<<endl;
 cin>>b1;
@@ -68,8 +68,12 @@ break;
 case 3:
 c1.display_income();
 break;
+case 4:
+cout<<"Thank you for stay with us";
+break;
 default:
 cout<<"Please enter any fixed key"<<endl;
+continue;
 }
 }while(choice!=4);
 
